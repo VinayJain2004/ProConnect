@@ -12,6 +12,7 @@
     ></script>
   </head>
   <body>
+
     <!-- Navbar & Header -->
 
     <div class="header">
@@ -19,6 +20,44 @@
         <div class="navlogo">
           <img src="./img/proconnect.png" alt="loading..." />
         </div>
+        <!-- Hamburger-->
+
+    <div class="container"> 
+      <nav class="navbar links">
+
+         <div class="logo"><img src="./img/sweetsvilla without bg.png" alt=""></div>
+
+         <ul class="nav-menu">
+           <a href="#">Home</a>
+           <a href="#">About Us</a>
+           <a href="#">Explore</a>
+           <a href="#">Message</a>
+           <a href="#">Connections</a>
+           <a href="#">Sign In</a>
+         </ul>
+         <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+         </div>
+      </nav>
+   </div> 
+ 
+<script>
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+}))
+</script>
         <div class="navlinks">
           <a href="#">Home</a>
           <a href="#">About Us</a>

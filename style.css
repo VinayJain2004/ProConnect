@@ -8,6 +8,44 @@ body{
     font-family: 'poppins' , 'sans-serif';
 }
 
+ /* HAMBURGER */
+
+ li{
+    list-style: none;
+  }
+  a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .container{
+    max-width: 1224px;
+    width: 90%;
+    margin: 0 auto;
+    display: none;
+  }
+  .navbar{
+    display: flex;
+  }
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+  }
+
 /* Navbar & Header */
 
 .header{
@@ -16,7 +54,6 @@ body{
 }
 .navbar{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-right: 60px;
     padding-top: 12px;
@@ -574,4 +611,309 @@ body{
     display: flex;
     padding: 16px 60px;
     justify-content: space-evenly;
+}
+
+/* Responsiveness */
+
+@media (max-width: 800px) {
+
+      /* Hamburger */
+
+  .hamburger{
+    display: block;
+  }
+  .container{
+    display: block;
+  }
+ .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+ .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+ .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+ .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 8px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #52b69a;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+ .nav-menu.active{
+    left: 0;
+  }
+
+    /* Header */
+
+    .header{
+        height: fit-content;
+    }
+    .navbar{
+        margin-right: 24px;
+    }
+    .navlinks{
+        display: none;
+    }
+    .navlogo img{
+        height: 50px;
+    }
+    .head{
+        flex-direction: column;
+        padding: 0;
+    }
+    .headtext{
+        width: 90%;
+        margin: 20px auto;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    .headtext h1{
+        font-size: 36px;
+    }
+    .headtext h2{
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+    .headtext p{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .headtext button{
+        font-size: 16px;
+    }
+    .headimg{
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    /* Features */
+
+    .fandb{
+        flex-direction: column;
+    }
+    .text{
+        font-size: 14px;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .text img{
+        width: 28px;
+    }
+    .feature h1{
+        font-size: 30px;
+    }
+
+    /* About */
+
+    .aboutus{
+        height: fit-content;
+        padding: 0 20px;
+    }
+    .aboutus h1{
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+    .about{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .aimg{
+        width: 80%;
+    }
+    .aimg img{
+        height: auto;
+    }
+    .atext{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .atext p{
+        font-size: 16px;
+    }
+
+    /* Featured Professionals */
+
+    .cards{
+        padding-left: 20px;
+    }
+    .card{
+        min-width: 100%;
+        padding: 20px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .prof h1{
+        font-size: 30px;
+    }
+    .card h2{
+        font-size: 24px;
+    }
+    .card p{
+        font-size: 12px;
+    }
+    .card button{
+        font-size: 16px;
+    }
+
+    /* Discover & Engage */
+
+    .cardsb{
+        overflow-x: hidden;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 30px;
+    }
+    .cardb{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .discover h1{
+        font-size: 30px;
+    }
+    .cardb h2{
+        font-size: 24px;
+    }
+    .cardb p{
+        font-size: 14px;
+    }
+    .cardb button{
+        font-size: 16px;
+    }
+
+    /* Testimonials */
+
+    .test{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .test h1{
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+    .testimonials{
+        justify-content: space-between;
+    }
+    .testimonial{
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+        text-align: center;
+        padding-right: 8px;
+        padding-left: 8px;
+        width: 76%;
+    }
+    .ttext{
+        width: 100%;
+    }
+    .ttext p{
+        font-size: 12px;
+        margin-top: 12px;
+    }
+    .timg img{
+        width: 100px;
+        height: 100px;
+    }
+    .arrow{
+        width: 40px;
+        height: 40px;
+    }
+
+    /* How it works */
+
+    .working{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .working h1{
+        font-size: 29px;
+        margin: 20px auto;
+    }
+    .working p{
+        font-size: 12px;
+    }
+    .bluecard{
+        width: 100%;
+        padding: 35px;
+        margin-bottom: 20px;
+    }
+    .greencard{
+        left: 0%;
+        width: 100%;
+        padding: 35px;
+        margin-bottom: 20px;
+    }
+
+    /* Membership plans */
+
+    .plans h1{
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+    .plancards{
+        flex-direction: column;
+    }
+    .plancard{
+        width: 100%;
+        height: fit-content;
+    }
+    .plancard h2{
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    .plancard p{
+        font-size: 14px;
+    }
+    .pbtn button{
+        font-size: 16px;
+    }
+
+    /* Impact & Success */
+
+    .impactimg{
+        flex-wrap: wrap;
+    }
+    .impact h1{
+        font-size: 30px;
+    }
+    
+    /* Footer */
+
+    .footer{
+        padding: 20px 0px;
+        flex-direction: column;
+    }
+    .footer-logo{
+        width: 80%;
+        margin: 10px auto;
+    }
+    .footer-logo img{
+        width: 275px;
+    }
+    .footer p{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .media{
+        margin: 16px;
+    }
+    .footer-links{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 50px;
+    }
+    .sftext{
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
 }
