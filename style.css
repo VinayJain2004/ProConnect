@@ -759,6 +759,11 @@ body{
     }
     .card p{
         font-size: 12px;
+        width: 76%;
+    }
+    .card img{
+        height: 80px;
+        width: 80px;
     }
     .card button{
         font-size: 16px;
@@ -785,6 +790,10 @@ body{
     }
     .cardb p{
         font-size: 14px;
+    }
+    .cardb img{
+        height: 80px;
+        width: 80px;
     }
     .cardb button{
         font-size: 16px;
